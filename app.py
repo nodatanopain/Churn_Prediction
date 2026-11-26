@@ -13,7 +13,7 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     try:
-        with open('hr_deployment_model', 'rb') as file:
+        with open('hr_deployment_model.pkl', 'rb') as file:
             model = pickle.load(file)
         return model
     except FileNotFoundError:
